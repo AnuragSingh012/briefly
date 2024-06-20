@@ -93,7 +93,7 @@ const Summary = () => {
             onChange={(e) =>
               setArticle({ ...article, [e.target.name]: e.target.value })
             }
-            className="absolute text-sm font-semibold right-0 mr-14"
+            className="absolute text-sm font-semibold right-0 mr-14 bg-white h-8 rounded-md"
             name="lang"
           >
             <option value="en">English</option>
@@ -157,6 +157,20 @@ const Summary = () => {
                   <p className="font-medium text-sm text-gray-700">
                     {article.summary}
                   </p>
+                  <div className="w-full flex justify-end pr-2">
+                    <div
+                      onClick={() => handleCopy(article.summary)}
+                      className="w-7 h-7 rounded-md bg-gray-100 flex justify-center items-center cursor-pointer"
+                    >
+                      <img
+                        className="w-3 h-3 object-contain"
+                        src={copied === article.summary ? tickIcon : copyIcon}
+                        alt={
+                          copied === article.summary ? "tick-icon" : "copy-icon"
+                        }
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             )
