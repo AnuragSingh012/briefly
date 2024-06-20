@@ -46,7 +46,7 @@ const Summary = () => {
     const options = {
       method: "GET",
       headers: {
-        "x-rapidapi-key": { apiKey },
+        "x-rapidapi-key": apiKey,
         "x-rapidapi-host": "article-extractor-and-summarizer.p.rapidapi.com",
       },
     };
