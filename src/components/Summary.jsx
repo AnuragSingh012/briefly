@@ -93,7 +93,7 @@ const Summary = () => {
             onChange={(e) =>
               setArticle({ ...article, [e.target.name]: e.target.value })
             }
-            className="absolute text-sm font-semibold right-0 mr-14 bg-white h-8 rounded-md"
+            className="absolute text-sm font-semibold right-0 mr-14 bg-white focus:outline-none h-8 rounded-md"
             name="lang"
           >
             <option value="en">English</option>
